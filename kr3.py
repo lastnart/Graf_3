@@ -36,14 +36,7 @@ def main():
     # Выводим сумму рассчитанных матриц
     print(f"Сумма всех посчитанных матриц:\n{(sum_matrix > 0).astype(int)}\n")
 
-    # Приведение суммарной матрицы к диагональному виду
-    result_matrix = np.zeros((n, n), dtype=int)
-    for i in range(n):
-        if sum_matrix[i, i] > 0:  # Если есть достижимость самосвязи, то записываем
-            result_matrix[i, i] = 1
-        # Другие элементы остаются 0
-
-    print(f"Финальная диагональная матрица достижимости (S1 + S2 + ... + Sd):\n{result_matrix}\n")
+    
 
 if __name__ == '__main__':
     main()
